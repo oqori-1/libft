@@ -45,7 +45,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
 int main(int argc, char const *argv[])
 {
-     	char *s = "Hello World";
+    char *s = "Hello World";
 
 	printf("1. %s\n", ft_substr(s, 0, 5));   // "Hello"
 	printf("2. %s\n", ft_substr(s, 6, 5));   // "World"

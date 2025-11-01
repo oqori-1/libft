@@ -1,7 +1,7 @@
 #include "libft.h"
 
 
-int ft_atoi(char *str)
+int ft_atoi(const char *str)
 {
      int res =0;
      int i =0;

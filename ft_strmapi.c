@@ -3,7 +3,7 @@
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-     int l =0;
+     size_t l =0;
      while (s[l])
      {
           l++;
@@ -15,7 +15,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
      }
      
 
-     int i =0;
+    size_t i =0;
      while (s[i])
      {
           char c = f(i,s[i]);

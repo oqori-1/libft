@@ -1,6 +1,6 @@
 #include"libft.h"
 
-static int is_equal(const char *str,char c){
+static int is_set(const char *str,char c){
      int i =0;
      while (str[i])
      {
@@ -22,13 +22,13 @@ char *ft_strtrim(char const *s1, char const *set){
           return NULL;
      size_t i =0;
      size_t start = 0;
-      size_t l = ft_strlen(s1) - 1;
-     size_t end = l;
+      
+     size_t end ;
     
      
      while (s1[i])
      {
-          if (is_equal(set,s1[i]))
+          if (is_set(set,s1[i]))
           {
                start++;
           } else{
@@ -36,23 +36,23 @@ char *ft_strtrim(char const *s1, char const *set){
           }
           i++;
      }
-     while (l > 0 && is_equal(set,s1[l]) )
-     {
-           end--;
-          l--;
-     }
+      end = ft_strlen(s1);
+    while (end > start && is_set(set, s1[end - 1]))
+        end--;
      
-     if (start > end)
-    return ft_strdup(""); 
+ 
 
-     char *p = malloc(end - start + 2);
+    if (start == end)
+        return ft_strdup("");
+        
+     char *p = malloc(end - start + 1);
      if (!p)
      {
           return NULL;
      }
      
     size_t j = 0;
-     while (start <= end)
+     while (start < end)
      {
           p[j] = s1[start];
           j++;

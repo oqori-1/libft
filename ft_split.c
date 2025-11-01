@@ -33,7 +33,7 @@ char **ft_split(char *s, char c)
     int count_world = count_word(s,c);
  int start =0;
      int end =0;
-    char **res = malloc(count_world * sizeof(char *));
+    char **res = malloc( (count_world + 1) * sizeof(char *));
   int i =0;
 int b =0;
 // "  hello   world  "
