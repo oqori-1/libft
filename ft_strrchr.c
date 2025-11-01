@@ -1,8 +1,10 @@
 #include"libft.h"
 
 char *ft_strrchr(const char *s, int c){
-     size_t i =0;
+
+     size_t i; 
      
+     i = 0;
      while (s[i])
           i++;
   
@@ -16,6 +18,9 @@ char *ft_strrchr(const char *s, int c){
      }
      return NULL;
 }
+
+
+
 
 int main(void)
 {

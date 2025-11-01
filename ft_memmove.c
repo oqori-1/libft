@@ -2,9 +2,20 @@
 
 void * ft_memmove( void * destination, const void * source, size_t size )
 {
-     unsigned char *des = (unsigned char *) destination;
-      unsigned char *src = (unsigned char *) source;
-       size_t i =0;
+     unsigned char *des;
+     const unsigned char *src;
+      size_t i;
+
+
+     des = (unsigned char *) destination;
+     src = (const unsigned char *) source;
+
+      if (!destination && !source)
+      {
+          return NULL;
+      }
+      
+      i = 0;
      //   "hello word"
        if (src > des)
        {
@@ -23,6 +34,15 @@ void * ft_memmove( void * destination, const void * source, size_t size )
        }
 
        return des;
-
+}
+int main(int argc, char const *argv[])
+{
+     char str[] = "hello world";
  
+    
+
+    printf("%s\n",  ft_memmove(str + 2, str, 5));
+    printf("%s\n",memmove(str + 2, str, 5) );
+    return 0;
+     return 0;
 }

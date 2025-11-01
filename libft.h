@@ -17,9 +17,14 @@ int  ft_isalpha(int c);
 
 char *ft_strchr(const char *s, int c);
 void *memchr(const void *s, int c, size_t n);
+void *ft_memcpy(void *dest, const void *src, size_t n);
+
+void *ft_memset(void *ptr, int value, size_t num);
+
+char *ft_strnstr(char *str , char *s, size_t num);
 
 size_t ft_strlen ( const char *str);
-void *ft_memset(void *ptr, int value, size_t num);
+int ft_isdigit(int c);
 
 char *ft_strnstr(char *str , char *s, size_t num);
 char *ft_substr(char const *s, unsigned int start, size_t len);

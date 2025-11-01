@@ -3,14 +3,27 @@
 
 void * ft_memset( void * pointer, int value, size_t count )
 {
-     unsigned char *p = (unsigned char *) pointer;
+      size_t i;
+     unsigned char *p;;
 
-     size_t i =0;
-     
+      i =0;
+     p = (unsigned char *) pointer;
      while (i < count)
      {
           p[i] = (unsigned char) value;
           i++;
      }
      return pointer;
+}
+
+
+int main(int argc, char const *argv[])
+{
+   
+
+     char *s = ft_memset(NULL,'1',3);
+    printf("%s\n",s);
+      
+     
+     return 0;
 }
