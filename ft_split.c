@@ -28,7 +28,7 @@ static int count_word(char *str,char c){
 }
 
 
-char **ft_split(char *s, char c)
+char **ft_split(const char *s, char c)
 {
     int count_world = count_word(s,c);
  int start =0;
