@@ -32,7 +32,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strtrim(char const *s1, char const *set);
 char *ft_strdup(char *str);
 //int count_word(char *str,char c);
-char **ft_split(char  *s, char c);
+char **ft_split(const char  *s, char c);
 char *ft_itoa(int n);
 void ft_putchar_fd(char c, int fd);
 void ft_lstdelone(t_list *lst, void (*del)(void*));

@@ -1,7 +1,7 @@
 #include"libft.h"
 
 
-static int count_word(char *str,char c){
+static int count_word(const char *str,char c){
      int i =0;
      int count =0;
 //"  hello world  "
@@ -30,6 +30,8 @@ static int count_word(char *str,char c){
 
 char **ft_split(const char *s, char c)
 {
+  if (!s)
+    return NULL;
     int count_world = count_word(s,c);
  int start =0;
      int end =0;
@@ -41,20 +43,26 @@ int b =0;
     {
       if (s[i] != c)
       {
-        start =i ;
+
+        start = i;
+
         while (s[i] && s[i] != c)
         {
           i++;
         }
-        end = i+1;
-        char *p = malloc(end - start+1);
-        int a =0;
-        while (a <= end - start)
+
+        end = i;
+
+        char *p = malloc( (end - start + 1) * sizeof(char));
+        int a = 0;
+
+        while (  start <end )
         {
           p[a] = s[start];
           start++;
           a++;
         }
+
         p[a]='\0';
            
         res[b] = p;
@@ -67,4 +75,17 @@ int b =0;
     }
     res[b] = NULL;
     return res;
+}
+
+int main(int argc, char const *argv[])
+{
+  char **s = ft_split("salm cv bien",' ');
+  int i =0;
+  while (i < 3)
+  {
+    printf("%s\n",s[i]);
+    i++;
+  }
+  
+  return 0;
 }
