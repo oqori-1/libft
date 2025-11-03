@@ -79,11 +79,13 @@ int b =0;
 
 int main(int argc, char const *argv[])
 {
-  char **s = ft_split("salm cv bien",' ');
+  char **s = ft_split("salm     cv       bien    ",' ');
   int i =0;
   while (i < 3)
   {
-    printf("%s\n",s[i]);
+    printf("%s",s[i]);
+    printf("#\n");
+ 
     i++;
   }
   
